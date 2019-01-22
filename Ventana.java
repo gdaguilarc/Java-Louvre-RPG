@@ -8,7 +8,9 @@ import javax.swing.ImageIcon;
 import java.io.*;
 
 public class Ventana extends JFrame {
-	private JLabel etiqueta1, nombre, over, imagenWelcome, errores, continuar;
+	private static final long serialVersionUID = 1L;
+
+	private JLabel etiqueta1, nombre, over, imagenWelcome, continuar;
 	private JTextField name;
 	private int index, arma = 1;
 	private Mapa louvre;
@@ -17,15 +19,15 @@ public class Ventana extends JFrame {
 	private Heroe heroe;
 	private JLabel snombre, pes, stipo, svida, svelocidad, sspeed, sdefensa, sdefence, snivel, sattack, sname, stype,
 			slife, slevel, spower, sdescription, des, sexp, sxp;
-	private JButton arriba, abajo, izq, dere, mart, save, conservar, noConservar;
+	private JButton arriba, abajo, izq, dere, save, conservar, noConservar;
 	private ImageIcon icon;
 	private JButton at, turbo, fisico, libroDeArte, libroDeHistoria, pc, camara, pincel;
-	private JPanel controlesAtack, controlesSec, what, mov, hability, controlesAtack2, libros, weapons, decision;
-	private JPanel welcome, crearHeroe, yesOrNo, tablero, ataque, jnombre, controles, stats, info, malla;
+	private JPanel controlesAtack, controlesSec, what, mov, controlesAtack2, libros, weapons, decision;
+	private JPanel welcome, crearHeroe, yesOrNo, controles, stats, info, malla;
 	private JButton ingresar, resume, itc, iniciar, lector, amante, foto;
-	private Personaje enemy;
 
 	public Ventana() {
+		ataque = new JPanel();
 		setSize(600, 1000);
 		setTitle("Juego Aventura en el Louvre version 1.0");
 		setLayout(new GridLayout(1, 1));
@@ -148,8 +150,6 @@ public class Ventana extends JFrame {
 		stats.setLayout(new GridLayout(9, 3));
 		crearHeroe = new JPanel();
 		crearHeroe.setLayout(new GridLayout(4, 2));
-		tablero = new JPanel();
-		ataque = new JPanel();
 
 		// inicializar botones
 		libroDeHistoria = new JButton(new ImageIcon("Img/historia.png"));

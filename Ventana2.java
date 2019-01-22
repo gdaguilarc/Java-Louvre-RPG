@@ -4,6 +4,8 @@ import java.awt.event.*;
 
 public class Ventana2 extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+
 	private Mapa mapitaCool;
 	private JLabel ene, pp1, pp2, pp3, pp4;
 	private JPanel panel1, panel2;

@@ -2,6 +2,8 @@ import java.io.Serializable;
 
 public class LibroDeHistoria extends Objeto implements Serializable {
 
+  private static final long serialVersionUID = 1L;
+
   public LibroDeHistoria() {
     super("Libro de Historia", "historia");
   }
