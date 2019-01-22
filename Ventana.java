@@ -27,7 +27,6 @@ public class Ventana extends JFrame {
 	private JButton ingresar, resume, itc, iniciar, lector, amante, foto;
 
 	public Ventana() {
-		ataque = new JPanel();
 		setSize(600, 1000);
 		setTitle("Juego Aventura en el Louvre version 1.0");
 		setLayout(new GridLayout(1, 1));

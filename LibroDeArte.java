@@ -1,7 +1,9 @@
 import java.io.Serializable;
 
 public class LibroDeArte extends Objeto implements Serializable {
-  public LibroDeArte() {
+  private static final long serialVersionUID = 1L;
+
+public LibroDeArte() {
     super("Libro de Arte", "Salud");
   }
 

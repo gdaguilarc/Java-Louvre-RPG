@@ -1,4 +1,3 @@
-import java.io.Serializable;
 
 public class Bosses extends Personaje {
 
