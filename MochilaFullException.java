@@ -1,6 +1,6 @@
-public class MochilaFullException extends Exception{
-	
-	public MochilaFullException(){
+public class MochilaFullException extends Exception {
+
+	public MochilaFullException() {
 		super("  Tu mochila esta llena :(.");
 	}
 

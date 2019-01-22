@@ -1,8 +1,10 @@
 import java.io.Serializable;
-public class Bosses extends Personaje{
-	
-	private String tipo = "inteligencia";	
-	public Bosses(int baseHp,int baseAttack, int baseDefensa,  int baseSpeed){
+
+public class Bosses extends Personaje {
+
+	private static final long serialVersionUID = 1L;
+
+	public Bosses(int baseHp, int baseAttack, int baseDefensa, int baseSpeed) {
 		super("inteligencia", "Bosses");
 		setBaseXp(200);
 		setBaseHp(baseHp);
@@ -10,11 +12,12 @@ public class Bosses extends Personaje{
 		setBaseDefensa(baseDefensa);
 		setBaseSpeed(baseSpeed);
 	}
-	public void levelUp(){
+
+	public void levelUp() {
 
 	}
-	public void levelUp(Heroe heroe){
+
+	public void levelUp(Heroe heroe) {
 
 	}
 }
-	

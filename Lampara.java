@@ -1,3 +1,3 @@
-public class Lampara{
+public class Lampara {
   // tipo de arma aquí van los stats
 }

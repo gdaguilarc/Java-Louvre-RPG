@@ -2,31 +2,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
-public class Ventana2 extends JFrame{
+public class Ventana2 extends JFrame {
 
 	private Mapa mapitaCool;
 	private JLabel ene, pp1, pp2, pp3, pp4;
-	private JPanel panel1,panel2;
-	String m1, m2, m3, m4, p1, p2, p3,p4, e1, e2, e3, e4, h1, h2, h3, h4, g1, g2, g3, g4, v1, v2, v3, v4, l1, l2, l3, l4;
+	private JPanel panel1, panel2;
+	String m1, m2, m3, m4, p1, p2, p3, p4, e1, e2, e3, e4, h1, h2, h3, h4, g1, g2, g3, g4, v1, v2, v3, v4, l1, l2, l3,
+			l4;
 	String momia, pintura, escultura, hammu, gio, venus, libertad;
 	private JButton cerrar;
 	private int index;
 
-
-
-	public Ventana2(Mapa mapitaCool, int index){
+	public Ventana2(Mapa mapitaCool, int index) {
 		this.mapitaCool = mapitaCool;
 		this.index = index;
-		setSize(450,800);
+		setSize(450, 800);
 		setTitle("Enemigos");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new GridLayout(2,1));
+		setLayout(new GridLayout(2, 1));
 		initHistoria();
 		setVisible(true);
 	}
 
-	public void initHistoria(){
+	public void initHistoria() {
 
 		m1 = "Es en el antiguo Egipto las momias eran un ritual funerario de los  ";
 		m2 = "personajes importantes, ya que, solo preservando el cuerpo, el alma ";
@@ -69,83 +67,78 @@ public class Ventana2 extends JFrame{
 		venus = "Img/venus.png";
 		libertad = "Img/libertad.png";
 
+		if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("Momia")) {
+			ImageIcon img = new ImageIcon(momia);
 
-		if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("Momia")){
-				ImageIcon img = new ImageIcon(momia);
+			ene = new JLabel(img);
+			pp1 = new JLabel(m1);
+			pp2 = new JLabel(m2);
+			pp3 = new JLabel(m3);
+			pp4 = new JLabel(m4);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(m1);
-				pp2= new JLabel(m2);
-				pp3 = new JLabel(m3);
-				pp4 = new JLabel(m4);
+		} else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("Obra de arte")) {
+			ImageIcon img = new ImageIcon(pintura);
 
-		}else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("Obra de arte")){
-				ImageIcon img = new ImageIcon(pintura);
+			ene = new JLabel(img);
+			pp1 = new JLabel(p1);
+			pp2 = new JLabel(p2);
+			pp3 = new JLabel(p3);
+			pp4 = new JLabel(p4);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(p1);
-				pp2= new JLabel(p2);
-				pp3 = new JLabel(p3);
-				pp4 = new JLabel(p4);
-
-		}else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("Escultura")){
+		} else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("Escultura")) {
 			ImageIcon img = new ImageIcon(escultura);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(e1);
-				pp2= new JLabel(e2);
-				pp3 = new JLabel(e3);
-				pp4 = new JLabel(e4);
+			ene = new JLabel(img);
+			pp1 = new JLabel(e1);
+			pp2 = new JLabel(e2);
+			pp3 = new JLabel(e3);
+			pp4 = new JLabel(e4);
 
-		}else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("LaGioconda")){
+		} else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("LaGioconda")) {
 			ImageIcon img = new ImageIcon(gio);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(g1);
-				pp2= new JLabel(g2);
-				pp3 = new JLabel(g3);
-				pp4 = new JLabel(g4);
+			ene = new JLabel(img);
+			pp1 = new JLabel(g1);
+			pp2 = new JLabel(g2);
+			pp3 = new JLabel(g3);
+			pp4 = new JLabel(g4);
 
-		}else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("ElHamurabi")){
+		} else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("ElHamurabi")) {
 			ImageIcon img = new ImageIcon(hammu);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(h1);
-				pp2= new JLabel(h2);
-				pp3 = new JLabel(h3);
-				pp4 = new JLabel(h4);
+			ene = new JLabel(img);
+			pp1 = new JLabel(h1);
+			pp2 = new JLabel(h2);
+			pp3 = new JLabel(h3);
+			pp4 = new JLabel(h4);
 
-		}else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("LaLibertadGuiandoAlPueblo")){
+		} else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("LaLibertadGuiandoAlPueblo")) {
 			ImageIcon img = new ImageIcon(libertad);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(l1);
-				pp2= new JLabel(l2);
-				pp3 = new JLabel(l3);
-				pp4 = new JLabel(l4);
+			ene = new JLabel(img);
+			pp1 = new JLabel(l1);
+			pp2 = new JLabel(l2);
+			pp3 = new JLabel(l3);
+			pp4 = new JLabel(l4);
 
-
-		}else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("LaVenusDeMilo")){
+		} else if (mapitaCool.getCasilla(index).getEnemigo().getNombre().equals("LaVenusDeMilo")) {
 			ImageIcon img = new ImageIcon(venus);
 
-				ene = new JLabel(img);
-				pp1 = new JLabel(v1);
-				pp2= new JLabel(v2);
-				pp3 = new JLabel(v3);
-				pp4 = new JLabel(v4);
+			ene = new JLabel(img);
+			pp1 = new JLabel(v1);
+			pp2 = new JLabel(v2);
+			pp3 = new JLabel(v3);
+			pp4 = new JLabel(v4);
 		}
-
-
 
 		cerrar = new JButton("cerrar");
 
-
-		panel1= new JPanel();
+		panel1 = new JPanel();
 		panel1.add(ene);
 		add(panel1);
 
 		panel2 = new JPanel();
-		panel2.setLayout(new GridLayout(5,1));
+		panel2.setLayout(new GridLayout(5, 1));
 		panel2.add(pp1);
 		panel2.add(pp2);
 		panel2.add(pp3);
@@ -156,16 +149,15 @@ public class Ventana2 extends JFrame{
 
 	}
 
-		public class CloseListener implements ActionListener{
-			public void actionPerformed(ActionEvent e){
+	public class CloseListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
 
-				setVisible(false);
-				dispose();
-				revalidate();
-				repaint();
-
-
-			}
+			setVisible(false);
+			dispose();
+			revalidate();
+			repaint();
 
 		}
+
+	}
 }

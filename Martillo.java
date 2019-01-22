@@ -1,3 +1,3 @@
-public class Martillo{
+public class Martillo {
   // tipo de arma aquí van los stats
 }

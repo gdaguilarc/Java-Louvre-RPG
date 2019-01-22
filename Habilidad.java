@@ -1,10 +1,11 @@
-public class Habilidad{
+public class Habilidad {
   private String nombre;
 
-  public void setNombre(String nombre){
+  public void setNombre(String nombre) {
     this.nombre = nombre;
   }
-  public String getNombre(){
+
+  public String getNombre() {
     return nombre;
   }
 }
